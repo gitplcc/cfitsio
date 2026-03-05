@@ -255,6 +255,7 @@ set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}")
 #==============================================================================
 
 ADD_LIBRARY(${LIB_NAME} ${LIB_TYPE} ${H_FILES} ${SRC_FILES})
+ADD_LIBRARY(CFITSIO::${LIB_NAME} ALIAS ${LIB_NAME})
 
 # Math:
 TARGET_LINK_LIBRARIES(${LIB_NAME} ${M_LIB})
